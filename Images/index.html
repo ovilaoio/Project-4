@@ -28,6 +28,82 @@
           </h1>
         </div>
       </div>
-    </div>
+
+   <!-- About Section -->
+   <div id="about">
+    <div class="container">
+        <div class="row">
+            
+            <!-- Image Column -->
+            <div class="about-col-1">
+                <img src="User.png">
+            </div>
+            
+            <!-- About Me Column -->
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Waxaan Ku Dhashay Dalka Ethiopia, Gaar ahaan Magalda Casimada U ah Ee Adisababa, Waxaa Ku Nolaa Mudo Gaaraysa "bilood, Kadib Waxaan Uguurnay Somalia, Gaar ahaan, Gobolka Puntland, Halkaas Aan Kusoo Noolaa, Muddo Gaaraysa 17 Sano, Kadib Waxaan Kasoo Dhoofey Wadankeygii Hooyo, Oo Waxaan Uguuray Wadanka United Kingdom, Halkaas Oo iLaa Wakhti Xaadirkan Aan Sameenayo Websitekaan Aan Ku Noolahay.</p>
+            
+     <!-- Skills, Experience, and Education Tabs -->
+<div class="tab-titles">
+  <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+  <p class="tab-links" onclick="opentab('experience')">Experience</p>
+  <p class="tab-links" onclick="opentab('education')">Education</p>
+</div>
+
+<div class="tab-contents active-tab" id="skills">
+  <ul>
+      <li><span>UI/UX</span><br>Designing Web/app interfaces</li>
+      <li><span>Web Development</span><br>Web app Development.</li>
+      <li><span>App Development</span><br>Building Android/iOS apps.</li>
+  </ul>
+</div>
+
+<div class="tab-contents" id="experience">
+  <ul>
+      <li><span>2022 - Current</span><br>UI/UX Design Training at ET Institute</li>
+      <li><span>2022 - 2023</span><br>Team lead at StartApp LLC.</li>
+      <li><span>2021 - 2020</span><br>Internship at Ekart eCommerce.</li>
+  </ul>
+</div>
+
+<div class="tab-contents" id="education">
+  <ul>
+      <li><span>2022</span><br>UI/UX Design Training at ET Institute</li>
+      <li><span>2022</span><br>MBA from MIT Bangalore.</li>
+      <li><span>2020</span><br>BBA from ISM Bangalore.</li>
+  </ul>
+</div>
+
+<script>
+  // Get all tab links and tab contents
+  var tablinks = document.getElementsByClassName("tab-links");
+  var tabcontents = document.getElementsByClassName("tab-contents");
+
+  function opentab(tabname) {
+      // Loop through each tab link and remove the "active-link" class
+      for (let tablink of tablinks) {
+          tablink.classList.remove("active-link"); // Corrected "classlist" to "classList"
+      }
+
+      // Loop through each tab content and remove the "active-tab" class
+      for (let tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab"); // Corrected "classlist" to "classList"
+      }
+
+      // Add the "active-link" class to the clicked tab link
+      document.querySelector(`.tab-links[onclick*="${tabname}"]`).classList.add("active-link");
+
+      // Add the "active-tab" class to the corresponding tab content
+      document.getElementById(tabname).classList.add("active-tab");
+  event.currentTarget.classList.add("active-link");
+  document.getElementById(tabname).classList.add("active-tab");
+
+  }
+</script>
+    
+
+
+
   </body>
 </html>
