@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: ` poppins`, sans-serif;
+  font-family: poppins, sans-serif;
   box-sizing: border-box;
 }
 body {
@@ -198,10 +198,7 @@ nav ul li a:hover::after {
   width: 100%;
   border-radius: 10px;
   display: block;
-  transition: transform 0.5s ;
-
-
-
+  transition: transform 0.5s;
 }
 .layer {
   width: 100%;
@@ -212,61 +209,68 @@ nav ul li a:hover::after {
   left: 0;
   bottom: 0;
   overflow: hidden;
-  display: flex;#
+  display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction:column ;
-  padding:0 40px ;
+  flex-direction: column;
+  padding: 0 40px;
   text-align: center;
-  font-size:18px ;
-transition: height 0.5s ;
-
+  font-size: 18px;
+  transition: height 0.5s;
 }
-.layer h3{
+.layer h3 {
   font-weight: 500;
-  margin-bottom:20px;
+  margin-bottom: 20px;
 }
-.layer a{
-margin-top: 20px;
-color: #ff004f;
-text-decoration: none;
-font-size: 18px;
-line-height: 60px;
-background: #fff;
-width: 60px;
-height: 60px;
-border-radius:50%;
-text-align: center;
-}
-.work:hover img{
- transform: scale(1.1) ;
+.layer a {
+  margin-top: 20px;
+  color: #ff004f;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
 }
 
-.work:hover .layer{
+.work:hover img {
+  transform: scale(1.1);
+}
+
+.work:hover .layer {
   height: 100%;
 }
-.btn{
+.btn {
   display: block;
   margin: 50px auto;
   width: fit-content;
   border: 1px solid #ff004f;
-  padding:14px 50px ;
- border-radius:6px ;
- text-decoration: none;
- color: #fff;
- transition:background 0.5s ;
-
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.5s;
 }
-.btn:hover{
+.btn:hover {
   background: #ff004f;
-
-
-
+}
+textarea {
+  rows: 4;
+  cols: 50;
 }
 
+@media screen and (max-width: 800px) {
+  .work-list {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 84px;
+  }
 
-
-
-
-
-
+  .work-list img {
+    height: 240px;
+    width: 150px;
+  }
+}
