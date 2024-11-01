@@ -13,13 +13,16 @@
         <nav>
           <img src="Images/Logo.png.JPG" class="logo" />
 
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Sevices</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+          <ul id="sidemenu" >
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Sevices</a></li>
+            <li><a href="#portolia">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
           </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
           <p>UI/UX Designer</p>
@@ -145,38 +148,44 @@
   <a href="#" class="btn">See more</a>
 
 </div>
-<!-- ----------Contact---------- -->
+<!-- Contact Section -->
 <div id="contact">
   <div class="container">
- <div class="row">
-  <div class="contact-left"></div>
-   <h1 class="sub-title">Contact Me</h1>
-   <p>contact@exmple.com</p>
-   <p>0123456789</p>
-   <div class="social-icons"></div>
-     <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-     <a href=""><i class="fa-brands fa-twitter-square"></i></a>
-     <a href=""><i class="fa-brands fa-instagram"></i></a>
-     <a href=""><i class="fa-brands fa-linkedin"></i></a>
-
+    <div class="row">
+      
+      <!-- Left Section (Contact Information) -->
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p><i class="fa-solid fa-paper-plane"></i> contact@example.com</p>
+        <p><i class="fa-solid fa-phone-volume"></i> +447448545995</p>
+        
+        <!-- Social Icons -->
+        <div class="social-icons">
+          <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://x.com/home" aria-label="Twitter"><i class="fa-brands fa-twitter-square"></i></a>
+          <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <a href="Ismail CV 2024.pdf" download class="btn btn2">Downlaod Cv</a>
+      </div>
+      
+      <!-- Right Section (Contact Form) -->
+      <div class="contact-right">
+        <form>
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="Email" placeholder="Your Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn btn2" >Submit</button>
+        </form>
+        <span id="msg">hello</span>
+      </div>
+    
+    </div>
   </div>
-  <div class="contact-right">
-  <form >
-  <input type="text" Name="Name" placeholder="Your Name" required>
- <input type="email" name="email" placeholder="Your Email" required  >
- <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
- <button type="submit">Submit</button>
-
-
-
-  </form>
-
-
-  </div>
-
+  <div class="copyright">
+    <p>copyright © Ismail. Made with <i class="fa-solid fa-heart"></i> by Easy Tutorials</p>
   </div>
 </div>
-
 
 
 <script>
@@ -206,7 +215,24 @@
   }
 </script>
     
+<script>
+  var sidemenu = document.getElementById("sidemenu");
+  
+  function openmenu() {
+    sidemenu.style.right = "0"; 
+  }
+  function closemenu() {
+    sidemenu.style.right = "-200px"; 
 
+
+  }
+
+
+
+
+
+
+</script>
 
 
   </body>
